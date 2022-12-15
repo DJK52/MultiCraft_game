@@ -123,7 +123,7 @@ minetest.register_node("bonusbox:chest_cap", {
 	selection_box = {
 		type = "fixed"
 	},
-	groups = {attached_node = 1, not_in_creative_inventory = 1},
+	groups = {attached_node = 1, not_in_creative_inventory = 0, in_creative_inventory = 1},
 	sounds = default.node_sound_wood_defaults()
 })
 
