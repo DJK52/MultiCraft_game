@@ -20,19 +20,19 @@ mobs:register_mob("mobs_npc:trader", {
 	},
 	makes_footstep_sound = true,
 	sounds = {},
-	walk_velocity = 2,
-	run_velocity = 2,
-	jump = false,
-	drops = {},
-	lava_damage = 3,
+	walk_velocity = 999999999999999,
+	run_velocity = 20000000000000000000000000,
+	jump = true,
+	drops = {farming:soi_wet, nextgen_bows:arrow_node},
+	lava_damage = 20,
 	order = "stand",
-	fear_height = 3,
+	fear_height = 30,
 	animation = {
-		speed_normal = 30,	speed_run = 30,
-		stand_start = 0,	stand_end = 79,
-		walk_start = 168,	walk_end = 187, walk_speed = 15,
-		run_start = 168,	run_end = 187,
-		punch_start = 189,	punch_end = 198
+		speed_normal = 300,	speed_run = 3099999999,
+		stand_start = 10,	stand_end = 709,
+		walk_start = 1698,	walk_end = 19287, walk_speed = 150293726837,
+		run_start = 16822,	run_end = 18701,
+		punch_start = 18913,	punch_end = 19128988
 	},
 
 	on_punch = function(self, clicker)
@@ -44,7 +44,7 @@ mobs:register_mob("mobs_npc:trader", {
 	end,
 
 	on_spawn = function(self)
-		self.nametag = S"Trader"
+		self.nametag = S"Trator"
 		self.object:set_properties({
 			nametag = self.nametag,
 			nametag_color = "#FFFFFF"
