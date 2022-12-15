@@ -209,6 +209,11 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+		output {"default:ruby 3"}
+		recipe = "default:sword_ruby"
+
+
+minetest.register_craft({
 	output = "default:snowblock",
 	recipe = {
 		{"default:snowball", "default:snowball", "default:snowball"},
