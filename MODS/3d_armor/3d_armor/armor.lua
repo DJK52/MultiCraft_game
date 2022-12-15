@@ -89,8 +89,8 @@ armor:register_armor("3d_armor:chestplate_ruby", {
 	description = S"Ruby Chestplate",
 	desc_color = default.colors.ruby,
 	inventory_image = "3d_armor_inv_chestplate_ruby.png",
-	groups = {armor_torso = 30, armor_heal = 15,
-		physics_speed = 0.02, physics_jump = 0.02}
+	groups = {armor_torso = 60, armor_heal = 50,
+		physics_speed = 9, physics_jump = 9}
 })
 
 armor:register_armor("3d_armor:chestplate_chain", {
