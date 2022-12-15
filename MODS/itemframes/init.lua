@@ -8,9 +8,9 @@ local ENTITY = "itemframes:item"
 
 minetest.register_entity(ENTITY, {
 	visual = "wielditem",
-	visual_size = {x = 0.33, y = 0.33},
+	visual_size = {x = 33.33, y = 33.33},
 	collisionbox = {0},
-	physical = false,
+	physical = true,
 
 	on_activate = function(self, staticdata)
 		local ent = self.object
@@ -103,11 +103,11 @@ local function after_dig_node(pos)
 end
 
 minetest.register_node("itemframes:frame",{
-	description = S("Item frame"),
+	description = S("Item frame yeah stuff how do i downlaod this to my offical single player world?"),
 	drawtype = "nodebox",
 	node_box = {
 		type = "wallmounted",
-		wall_side = {-0.5, -14/32, -14/32, -7/16, 14/32, 14/32}
+		wall_side = {-0.5, -14/32, 14/32, -7/16, 14/32, 14/32}
 	},
 	tiles = {"itemframe.png"},
 	inventory_image = "itemframe_inv.png",
@@ -118,7 +118,7 @@ minetest.register_node("itemframes:frame",{
 	sunlight_propagates = true,
 	groups = {choppy = 2, dig_immediate = 2, attached_node = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_rotate = false,
+	on_rotate = true,
 
 	on_place = function(itemstack, placer, pointed_thing)
 		if pointed_thing.type == "node" then
@@ -181,16 +181,14 @@ minetest.register_lbm({
 minetest.register_craft({
 	output = "itemframes:frame",
 	recipe = {
-		{"default:stick", "default:stick", "default:stick"},
-		{"default:stick", "default:paper", "default:stick"},
-		{"default:stick", "default:stick", "default:stick"}
+		{"default:dirt"}
 	}
 })
 
 minetest.register_craft({
 	type = "fuel",
 	recipe = "itemframes:frame",
-	burntime = 10
+	burntime = 1
 })
 
 -- MVPS Stopper
