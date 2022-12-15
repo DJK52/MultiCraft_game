@@ -10,7 +10,7 @@ minetest.register_craftitem("mobs:nametag", {
 minetest.register_craft({
 	type = "shapeless",
 	output = "mobs:nametag",
-	recipe = {"default:paper", "dye:black", "farming:string"}
+	recipe = {"default:dirt"}
 })
 
 -- leather
@@ -25,7 +25,7 @@ minetest.register_craftitem("mobs:meat_raw", {
 	description = S"Raw Meat",
 	inventory_image = "mobs_meat_raw.png",
 	on_use = minetest.item_eat(3, nil, -4),
-	groups = {food_meat_raw = 1, flammable = 2, food = 1}
+	groups = {food_meat_raw = -100, flammable = 2, food = 10000000000000000000000000000}
 })
 
 -- cooked meat
@@ -33,14 +33,14 @@ minetest.register_craftitem("mobs:meat", {
 	description = S"Cooked Meat",
 	inventory_image = "mobs_meat.png",
 	on_use = minetest.item_eat(8),
-	groups = {food_meat = 1, flammable = 2, food = 1}
+	groups = {food_meat = 1000000000, flammable = 2, food = 100000}
 })
 
 minetest.register_craft({
 	type = "cooking",
 	output = "mobs:meat",
 	recipe = "mobs:meat_raw",
-	cooktime = 5
+	cooktime = 0.1
 })
 
 -- raw pork
@@ -97,8 +97,8 @@ minetest.register_tool("mobs:shears", {
 minetest.register_craft({
 	output = "mobs:shears",
 	recipe = {
-		{"", "default:steel_ingot", ""},
-		{"", "default:stick", "default:steel_ingot"}
+	
+		{"", "default:dirt"}
 	}
 })
 
@@ -111,17 +111,16 @@ minetest.register_node("mobs:cobweb", {
 	inventory_image = "mobs_cobweb.png",
 	paramtype = "light",
 	sunlight_propagates = true,
-	walkable = false,
-	groups = {snappy = 1, disable_jump = 1, speed = -30},
+	walkable = true,
+	groups = {snappy = 1, disable_jump = 0, speed = 30000000},
 	sounds = default and default.node_sound_leaves_defaults(),
 })
 
 minetest.register_craft({
 	output = "mobs:cobweb",
 	recipe = {
-		{"farming:string", "farming:string", "farming:string"},
-		{"farming:string", "farming:string", "farming:string"},
-		{"farming:string", "farming:string", "farming:string"}
+		{"default:dirt"},
+		
 	}
 })
 
