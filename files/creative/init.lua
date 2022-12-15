@@ -2,7 +2,7 @@ creative = {}
 
 minetest.register_privilege("creative", {
 	description = "Enable creative mode",
-	give_to_singleplayer = false
+	give_to_singleplayer = true
 })
 
 -- Override the engine's creative mode function
