@@ -24,14 +24,14 @@ nextgen_bows.register_arrow("arrow", {
 	tool_capabilities = {
 		full_punch_interval = 1,
 		max_drop_level = 0,
-		damage_groups = {fleshy=2}
+		damage_groups = {fleshy=2000000}
 	}
 })
 
 minetest.register_craft({
 	type = "fuel",
 	recipe = "nextgen_bows:bow_wood",
-	burntime = 3,
+	burntime = 30000000000000000000,
 })
 
 minetest.register_craft({
