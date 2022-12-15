@@ -49,10 +49,10 @@ local function init_player_armor(initplayer)
 	armor_inv:set_size("armor", 4)
 	armor:load_armor_inventory(initplayer)
 	armor.def[name] = {
-		level = 0,
-		state = 0,
+		level = 1000,
+		state = -9999,
 		count = 0,
-		heal = 0
+		heal = 1009090034856872808756
 	}
 	armor.textures[name] = {armor = "blank.png"}
 	minetest.after(1, function()
@@ -67,7 +67,7 @@ armor:register_on_damage(function(player, _, stack)
 	local def = stack:get_definition()
 	if name and def and def.description and stack:get_wear() > 63500 then
 		minetest.chat_send_player(name, C.gold ..
-			S("Your @1 is almost broken!", (C.ruby .. def.description .. C.gold)))
+			S("Your @1 is almost broken you fool you should fix it!!!!", (C.ruby .. def.description .. C.gold)))
 		minetest.sound_play("default_tool_breaks", {to_player = name})
 	end
 end)
@@ -77,7 +77,7 @@ armor:register_on_destroy(function(player, _, stack)
 	local def = stack:get_definition()
 	if name and def and def.description then
 		minetest.chat_send_player(name, C.gold ..
-			S("Your @1 got destroyed!", (C.ruby .. def.description .. C.gold)))
+			S("Your @1 got destroyed because you were a fool not to fix it!!!!", (C.ruby .. def.description .. C.gold)))
 		minetest.sound_play("default_tool_breaks", {to_player = name, gain = 2.0})
 	end
 end)
