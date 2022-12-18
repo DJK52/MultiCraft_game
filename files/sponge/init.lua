@@ -49,8 +49,8 @@ end
 minetest.register_node("sponge:liquid_stop", {
 	drawtype = "airlike",
 	drop = "",
-	groups = {not_in_creative_inventory = 1},
-	pointable = false,
+	groups = {in_creative_inventory = 1},
+	pointable = true,
 	walkable = false,
 	floodable = false,
 	sunlight_propagates = true,
@@ -62,7 +62,7 @@ minetest.register_node("sponge:liquid_stop", {
 minetest.register_node("sponge:sponge", {
 	description = S"Sponge",
 	tiles = {"sponge_sponge.png"},
-	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3, not_cuttable = 1},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3, not_cuttable = 0, cuttable = 1},
 	after_place_node = construct,
 	after_destruct = destruct
 })
