@@ -2,7 +2,7 @@
 -- {item_name, minimum, maximum}
 
 local items_ore = {
-	{"mesecons:wire_00000000_off", 4, 16},
+	{"mesecons:wire_00000000_on", 4, 16},
 	{"default:steel_ingot", 1, 3},
 	{"default:gold_ingot", 1, 3},
 	{"default:diamond", 1, 1},
